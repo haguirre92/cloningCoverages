@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Newcoverage from "../components/Newcoverage";
 import Producto from "../components/Product";
 import Coverage from "../components/Coverage";
+import Infocoverage from "../components/Infocoverage";
 
 
 function App() {
@@ -13,11 +14,13 @@ function App() {
     return (
         <div className="container">
             <Header />
-            <Newcoverage />
+            <Newcoverage title="Clonación de coberturas" />
             <div className="row">
                 <Producto></Producto>
                 <Coverage></Coverage>
             </div>
+            <br />
+            <Infocoverage></Infocoverage>
         </div>
     );
 }
