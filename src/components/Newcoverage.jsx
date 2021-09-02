@@ -1,0 +1,17 @@
+import React from "react";
+
+
+const Newcoverage = () => (
+    <div className="container">
+    <div className="container-md">
+        <div className="mb-3">
+            <label for="labeFormControlName" className="form-label">Ingresar nombre de nueva cobertura</label>
+            <input type="text" className="form-control" id="formControlInput1" placeholder="Lucro cesante (Español)" />
+            <br/>
+            <input type="text" className="form-control" id="formControlInput1" placeholder="Loss of profit (Ingles)" />
+        </div>
+    </div>
+    </div>
+);
+
+export default Newcoverage;
