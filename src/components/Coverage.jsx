@@ -2,7 +2,7 @@ import ReactChild from "react";
 
 const Coverage = () => (
     <div className="col">
-    <label htmlFor="">Cobertura</label>
+    <label >Cobertura</label>
     <select className="form-control form-control-sm">
         <option>Lucro cesante</option>
         <option>Basico</option>

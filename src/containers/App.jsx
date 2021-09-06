@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../assets/styles/App.css";
 import "../assets/styles/App.scss";
-import logo from "../assets/static/middle.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "../components/Header";
 import Newcoverage from "../components/Newcoverage";
 import Producto from "../components/Product";
