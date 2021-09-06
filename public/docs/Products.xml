@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="OfferingType_Ext"
+  name="OfferingType_Ext">
+  <typecode
+    code="CPKPES"
+    desc="Entrepreneur Plan Sura"
+    name="Entrepreneur Plan Sura">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPPlanPymeProtected"
+    desc="Plan Pyme Protected"
+    name="Plan Pyme Protected"
+    retired="true">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPMRC"
+    desc="Corporate Multi-Risk"
+    name="MRC">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPTheft"
+    desc="Theft"
+    name="Theft">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPDamage"
+    desc="All Business Risk"
+    name="All Business Risk">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPBreakdownMachinery"
+    desc="Breakdown Machinery"
+    name="Breakdown Machinery">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPInternalDamageElectronicEquipment"
+    desc="Internal Damage Electronic Equipment"
+    name="Internal Damage Electronic Equipment">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPMEC"
+    desc="Machinery And Equipment Contractors"
+    name="MEC">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMCivilWorks"
+    desc="Civil Works Insurance"
+    name="Civil Works Insurance">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="BOTRC"
+    desc="All Risk Construction"
+    name="All Risk Construction">
+    <category
+      code="BusinessOwners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="BOSecureHome"
+    desc="Secure Home Insurance"
+    name="Secure Home Insurance">
+    <category
+      code="BusinessOwners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="BOTRM"
+    desc="All Mounting Risk"
+    name="All Mounting Risk">
+    <category
+      code="BusinessOwners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPAutomaticMerchandiseTransports"
+    desc="Automatic transports of merchandise"
+    name="Automatic transports of merchandise">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPSpecificMerchandiseTransports"
+    desc="Specific transports of merchandise"
+    name="Specific transports of merchandise">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMLandTransporte"
+    desc="Land Transport Insurance"
+    name="Land Transport Insurance"
+    retired="true">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMBulkingAgent"
+    desc="Bulking Agent"
+    name="Bulking Agent">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMProjectLoad"
+    desc="Project Load"
+    name="Project Load">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPTransportValues"
+    desc="Transport of values"
+    name="Transport of values">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMRecreationBoats"
+    desc="Recreation Boats"
+    name="Recreation Boats">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMCommercialBoats"
+    desc="Commercial Boats"
+    name="Commercial Boats">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="HOCellPhones"
+    desc="Cell Phone"
+    name="Cell Phone">
+    <category
+      code="Homeowners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPPRc"
+    desc="Civil Liability For Damages To Third Parties"
+    name="Civil Liability">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLCivilLiabilityWorkshopsParking"
+    desc="Civil Liability Workshops - Parking"
+    name="Civil Liability Workshops - Parking">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLCivilLiabilityHealthProfessionals"
+    desc="Civil Liability For Health Professionals"
+    name="Civil Liability For Health Professionals">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLEmployerLiability"
+    desc="Employer Liability"
+    name="Employer Liability">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPLegalProtection"
+    desc="Legal protection"
+    name="Legal protection">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPDigitalProtection"
+    desc="Digital protection"
+    name="Digital protection">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPGlobalDigitalProtection"
+    desc="Global Digital Protection"
+    name="Global Digital Protection">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLCivilLiabilityManagersAdministrators"
+    desc="Civil Liability For Directors And Administrators"
+    name="Civil Liability For Directors And Administrators">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLCivilLiabilityFamilies"
+    desc="Family Civil Liability"
+    name="Family Civil Liability">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLIRF"
+    desc="Infidelity And Financial Risks"
+    name="Infidelity And Financial Risks">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPFraude"
+    desc="Fraud"
+    name="Fraud">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLCivilLiabilityEnvironmentPollution"
+    desc="Civil Liability Environment"
+    name="Civil Liability Environment">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLPets"
+    desc="Insurance For Pets"
+    name="Insurance For Pets">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLFulfillment"
+    desc="Fulfillment"
+    name="Fulfillment">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="HOHome"
+    desc="Home"
+    name="Home">
+    <category
+      code="Homeowners"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="PAAutos"
+    desc="Autos"
+    name="Autos">
+    <category
+      code="PersonalAuto"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPProtectedCompanyPlan"
+    desc="Protected Company Plan"
+    name="Protected Company Plan">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPPortOperators"
+    desc="Civil Liability For Port Operators"
+    name="Civil Liability For Port Operators">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMAircraftHelmet"
+    desc="Aircraft Helmet"
+    name="Aircraft Helmet">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLLease"
+    desc="Lease"
+    name="Lease">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPKMySafeBusiness"
+    desc="My Safe Business"
+    name="My Safe Business">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPMRCRSA"
+    desc="Corporate Multi-Risk RSA"
+    name="Corporate Multi-Risk RSA">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLPetsCorrespondent"
+    desc="Pets insurance by Correspondent"
+    name="Pets insurance by Correspondent">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLPetsTuya"
+    desc="Pets insurance by TUYA"
+    name="Pets insurance by TUYA">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLPetsBank"
+    desc="Pet insurance by Bancaseguros"
+    name="Pet insurance by Bancaseguros">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPFarming"
+    desc="Farming"
+    name="Farming">
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLPersonalCyberProtection"
+    desc="personal cyber protection"
+    name="personal cyber protection">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPFireNamedRisks"
+    desc="Fire named risks"
+    name="Fire named risks">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLMobileSura"
+    desc="Mobile sura"
+    name="Mobile sura">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typefilter
+    desc="Salvage opportunity"
+    name="SalvageOpportunity_Ext">
+    <include
+      code="CPFraude"/>
+    <include
+      code="CPTheft"/>
+    <include
+      code="GLIRF"/>
+  </typefilter>
+  <typefilter
+    desc="Financial Line Offerings"
+    name="FinanacialLine_Ext">
+    <include
+      code="GLCivilLiabilityManagersAdministrators"/>
+    <include
+      code="GLIRF"/>
+  </typefilter>
+  <typecode
+    code="GLLegalProtectionCompanies"
+    desc="Legal protection companies"
+    name="Legal protection companies">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="GLLegalProtectionPlusCompanies"
+    desc="Legal protection plus companies"
+    name="Legal protection plus companies">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMInternationalTravel"
+    desc="International Travel"
+    name="International Travel">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="IMNationalTravel"
+    desc="National Travel"
+    name="National Travel">
+    <category
+      code="InlandMarine"
+      typelist="PolicyType"/>
+  </typecode>
+  <typecode
+    code="CPKTarjetaProtegidaCrediuno"
+    desc="Protected Credit Card"
+    name="Tarjeta Protegida Crediuno">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+  <typefilter
+    desc="Travel Products Offerings"
+    name="TravelProduct_Ext">
+    <include
+      code="IMInternationalTravel"/>
+    <include
+      code="IMNationalTravel"/>
+  </typefilter>
+  <typefilter
+    desc="Transport product"
+    name="TransportProduct_Ext">
+    <include
+      code="CPAutomaticMerchandiseTransports"/>
+    <include
+      code="CPTransportValues"/>
+    <include
+      code="CPSpecificMerchandiseTransports"/>
+  </typefilter>
+  <typecode
+    code="CPPets"
+    desc="Pets"
+    name="Pets"/>
+  <typecode
+    code="GLSoat"
+    desc="Seguro Obligatorio de Accidentes de Tr&#225;nsito (SOAT)"
+    name="Seguro Obligatorio de Accidentes de Tr&#225;nsito (SOAT)">
+    <category
+      code="GeneralLiability"
+      typelist="PolicyType"/>
+  </typecode>
+</typelist>
