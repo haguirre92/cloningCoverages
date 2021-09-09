@@ -11808,8 +11808,34 @@
       typelist="OfferingType_Ext"/>
   </typecode>
   <typecode
+    code="SUSConViolenciaCOV1"
+    desc="Sustracci&#243;n con m&#237;nima violencia Subl&#237;mite"
+    name="Sustracci&#243;n con m&#237;nima violencia Subl&#237;mite">
+    <category
+      code="CommercialPackage"
+      typelist="PolicyType"/>
+    <category
+      code="CommercialProperty"
+      typelist="PolicyType"/>
+    <category
+      code="PC"
+      typelist="SourceSystem"/>
+    <category
+      code="SUSConViolenciaCOV"
+      typelist="CoverageSubtype"/>
+    <category
+      code="CPTheft"
+      typelist="OfferingType_Ext"/>
+    <category
+      code="CPDamage"
+      typelist="OfferingType_Ext"/>
+    <category
+      code="CPMRC"
+      typelist="OfferingType_Ext"/>
+  </typecode>
+  <typecode
     code="SUSConViolenciaCOV"
-    desc="Sustracci&#243;n con violencia"
+    desc="Sustracci&#243;n con violencia "
     name="Sustracci&#243;n con violencia">
     <category
       code="CommercialPackage"
