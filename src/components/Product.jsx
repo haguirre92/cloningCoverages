@@ -7,7 +7,12 @@ const Product = () => {
 
     useEffect(() => {
         getProducts();
-    }, []);    
+    }, []);
+
+  /*  readfile = async() => {
+        const res = await axios.get('docs/typekeys.txt', { "Content-Type": "aplication/txt; charset=utf-8" })
+        console.log(res.data)
+    }*/
 
     return (
         <div className="col">

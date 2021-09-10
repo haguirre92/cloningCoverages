@@ -21,7 +21,8 @@ const Coverage = () => {
             { 'base': 'í', 'letters': /&#237;/g },
             { 'base': 'é', 'letters': /&#233;/g },
             { 'base': 'ñ', 'letters': /&#241;/g },
-            { 'base': 'a', 'letters': /&#225;/g }
+            { 'base': 'á', 'letters': /&#225;/g },
+            { 'base': 'ú', 'letters': /&#250;/g }
         ]
         const string1 = ' '.toString().concat(string, ' ');
         const separate = string1.toString().split(' ');
