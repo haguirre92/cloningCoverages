@@ -46,69 +46,35 @@ const ProductState = (props) => {
     }
 
     const queryInfoCoverage = (codeCoverage) => {
-       // console.log("Cobertura: "+codeCoverage);
-        getTerm(codeCoverage);
-        getCauses(codeCoverage);
-        getCosts(codeCoverage);
-
+        extractInfoOfCoverage(codeCoverage)
     }
-    const getTerm = async (codeCoverage) => {
-        const res = await axios.get('docs/Terms.xml', { "Content-Type": "aplication/xml; charset=utf-8" })
+
+    const extractInfoOfCoverage = (codeCoverage) => {
+        const sources = ['Terms','Causes','Costs'];
+        sources.forEach(source => {
+            getData(source,codeCoverage)
+        })
+    }
+
+    const getData = async (source,codeCoverage) => {
+        const route = 'docs/'+source+'.xml';
+        const patch = 'GET_'+source.toUpperCase();
+        const res = await axios.get(route, { "Content-Type": "aplication/xml; charset=utf-8" })
         const jsonDataFromXML = new XMLParser().parseFromString(res.data);
         const data = jsonDataFromXML.getElementsByTagName('typecode');
-        const termsOfCoverage = [];
+        const infoOfCoverage = [];
         data.forEach((term) => {
             const childs = term.children;
             childs.forEach((child) => {
                 if (child.attributes['typelist'] === 'CoverageType' && child.attributes['code'] === codeCoverage) {
-                    termsOfCoverage.push(term);
+                    infoOfCoverage.push(term);
                 }
             });
         });
 
         dispatch({
-            type: 'GET_TERMS',
-            payload: termsOfCoverage
-        })
-    }
-
-    const getCauses = async (codeCoverage) => {
-        const res = await axios.get('docs/Causes.xml', { "Content-Type": "aplication/xml; charset=utf-8" })
-        const jsonDataFromXML = new XMLParser().parseFromString(res.data);
-        const data = jsonDataFromXML.getElementsByTagName('typecode');
-        const causesOfCoverage = [];
-        data.forEach((cause) => {
-            const childs = cause.children;
-            childs.forEach((child) => {
-                if (child.attributes['typelist'] === 'CoverageType' && child.attributes['code'] === codeCoverage) {
-                    causesOfCoverage.push(cause);
-                }
-            });
-        });
-
-        dispatch({
-            type: 'GET_CAUSES',
-            payload: causesOfCoverage
-        })
-    }
-
-    const getCosts = async (codeCoverage) => {
-        const res = await axios.get('docs/Costs.xml', { "Content-Type": "aplication/xml; charset=utf-8" })
-        const jsonDataFromXML = new XMLParser().parseFromString(res.data);
-        const data = jsonDataFromXML.getElementsByTagName('typecode');
-        const costsOfCoverage = [];
-        data.forEach((cost) => {
-            const childs = cost.children;
-            childs.forEach((child) => {
-                if (child.attributes['typelist'] === 'CoverageType' && child.attributes['code'] === codeCoverage) {
-                    costsOfCoverage.push(cost);
-                }
-            });
-        });
-
-        dispatch({
-            type: 'GET_COSTS',
-            payload: costsOfCoverage
+            type: patch,
+            payload: infoOfCoverage
         })
     }
 
@@ -122,10 +88,8 @@ const ProductState = (props) => {
             coverageSelected: state.coverageSelected,
             getProducts,
             getCoverage,
-            getTerm,
-            getCauses,
-            getCosts,
-            queryInfoCoverage
+            queryInfoCoverage,
+            extractInfoOfCoverage
         }}>
             {props.children}
         </ProductContext.Provider >
