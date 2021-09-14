@@ -4,9 +4,11 @@ import ProductContext from '../context/ProductContext';
 //import { escapeRegExp } from "../utilities/readXML.js'";
 
 const Coverage = () => {
-    const { productSelected } = useContext(ProductContext);
+    const { getProducts, getCoverage, productSelected, getTerm } = useContext(ProductContext);
 
     useEffect(() => {
+        getProducts();
+        getCoverage();
     }, []);
 
     function concatWords(words){
@@ -44,11 +46,11 @@ const Coverage = () => {
     return (
         <div className="col">
             <label >Coverage</label>
-            <select className="form-control form-control-sm">                             
+            <select className="form-control form-control-sm" onChange={(e) => getTerm(e.target.value)}>                             
                 {                   
                     productSelected.map(item => {
                         return (
-                            <option key={item.attributes['code']}>{escapeRegExp(item.attributes['name'])}</option>
+                            <option value={item.attributes['code']} key={item.attributes['code']}>{escapeRegExp(item.attributes['name'])}</option>
                         )
                     })
                 }

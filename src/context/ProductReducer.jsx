@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, GET_COVERAGES } from "../actions";
+import { GET_PRODUCTS, GET_COVERAGES, GET_TERMS } from "../actions";
 
 export default (state, action) => {
     const { payload, type } = action;
@@ -13,6 +13,11 @@ export default (state, action) => {
                 ...state,
                 productSelected: payload
             }
+            case GET_TERMS:
+                return {
+                    ...state,
+                    terms: payload
+                }
         default:
             return state;
     }

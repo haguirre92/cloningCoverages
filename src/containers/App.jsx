@@ -34,9 +34,10 @@ import { render } from 'react-dom';
                     <Producto></Producto>
                     <Coverage></Coverage>
                 </div>
-                </ProductState>
+               
                 <br />
                 <Infocoverage></Infocoverage>
+                </ProductState>
             </div>
         );
     }
