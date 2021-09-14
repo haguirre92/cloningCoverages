@@ -12,35 +12,24 @@ import ProductState from '../context/ProductState';
 import Buttons from '../components/SaveButton';
 import { render } from 'react-dom';
 
-/*class App extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            product: ''
-        }
-    }*/
-    function App() {
-        return (
-            <div className="container">
-                <div className="row">
-                    <Header />
-                    <Buttons></Buttons>
-                </div>
-                <Newcoverage title="Clonación de coberturas" />
-                
-                
-               <ProductState>
+
+function App() {
+    return (
+        <div className="container">
+            <div className="row">
+                <Header />
+                <Buttons></Buttons>
+            </div>
+            <Newcoverage title="Clonación de coberturas" />
+            <ProductState>
                 <div className="row">
                     <Producto></Producto>
                     <Coverage></Coverage>
-                </div>
-               
-                <br />
+                </div><br />
                 <Infocoverage></Infocoverage>
-                </ProductState>
-            </div>
-        );
-    }
-//}
+            </ProductState>
+        </div>
+    );
+}
 
 export default App;

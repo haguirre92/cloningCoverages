@@ -8,7 +8,6 @@ const ProductState = (props) => {
     const initialState = {
         products: [],
         productSelected: [],
-        coverageSelected: '',
         terms: [],
         causes: [],
         costs: []
@@ -85,7 +84,6 @@ const ProductState = (props) => {
             terms: state.terms,
             causes: state.causes,
             costs: state.costs,
-            coverageSelected: state.coverageSelected,
             getProducts,
             getCoverage,
             queryInfoCoverage,

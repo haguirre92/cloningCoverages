@@ -1,11 +1,13 @@
 function concatWords(words){
     const textArrived = words.toString().split(',');
     const textJoined = textArrived.join(' ');
+    //console.log('invoco esta!')
     return textJoined
+    
 }
 
-export const escapeRegExp=(string) =>{
-    const defaultComillasRemovalMap = [
+export default function escapeRegExp(string){
+   const defaultComillasRemovalMap = [
         { 'base': 'ó', 'letters': /&#243;/g },
         { 'base': 'í', 'letters': /&#237;/g },
         { 'base': 'é', 'letters': /&#233;/g },
@@ -26,5 +28,6 @@ export const escapeRegExp=(string) =>{
             }
         })
     })
+    //concatWords('cosa')
     return concatWords(separate)
 }
