@@ -10,24 +10,22 @@ const Coverage = () => {
         getProducts();
         getCoverage();
         queryInfoCoverage()
-    }, []);
-
-    function concatWords(words){
-        const textArrived = words.toString().split(',');
-        const textJoined = textArrived.join(' ');
-        return textJoined
-    }
+    }, []);   
+    
     
     return (
+        
         <div className="col">
             <label >Coverage</label>
             <select className="form-control form-control-sm" onChange={(e) => queryInfoCoverage(e.target.value)}>                             
-                {                   
+                {   
+                productSelected.length!==0 ?                
                     productSelected.map(item => {
                         return (
                             <option value={item.attributes['code']} key={item.attributes['code']}>{escapeRegExp(item.attributes['name'])}</option>
                         )
                     })
+                    : <option>Elije un producto</option>
                 }
             </select>
         </div>

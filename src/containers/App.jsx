@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useState } from "react";
 import "../assets/styles/App.css";
 import "../assets/styles/App.scss";
@@ -7,7 +7,8 @@ import Header from "../components/Header";
 import Newcoverage from "../components/Newcoverage";
 import Producto from "../components/Product";
 import Coverage from "../components/Coverage";
-import Infocoverage from "../components/Infocoverage";
+const Infocoverage = React.lazy(() => import("../components/Infocoverage"))
+//import Infocoverage from ;
 import ProductState from '../context/ProductState';
 import Buttons from '../components/SaveButton';
 import { render } from 'react-dom';
@@ -26,7 +27,9 @@ function App() {
                     <Producto></Producto>
                     <Coverage></Coverage>
                 </div><br />
-                <Infocoverage></Infocoverage>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Infocoverage></Infocoverage>
+                </Suspense>
             </ProductState>
         </div>
     );

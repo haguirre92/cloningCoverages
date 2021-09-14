@@ -1,7 +1,7 @@
 function concatWords(words){
     const textArrived = words.toString().split(',');
     const textJoined = textArrived.join(' ');
-    //console.log('invoco esta!')
+   // console.log('invoco esta! '+words)
     return textJoined
     
 }

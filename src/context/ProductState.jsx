@@ -45,7 +45,12 @@ const ProductState = (props) => {
     }
 
     const queryInfoCoverage = (codeCoverage) => {
-        extractInfoOfCoverage(codeCoverage)
+       // console.log('tenemos: '+codeCoverage)
+        if(typeof codeCoverage !== 'undefined'){
+            extractInfoOfCoverage(codeCoverage)
+        }else{
+            console.log('no tenemos nada para trabajar: '+codeCoverage)
+        }        
     }
 
     const extractInfoOfCoverage = (codeCoverage) => {
