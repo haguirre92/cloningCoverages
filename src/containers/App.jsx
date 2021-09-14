@@ -9,6 +9,7 @@ import Producto from "../components/Product";
 import Coverage from "../components/Coverage";
 import Infocoverage from "../components/Infocoverage";
 import ProductState from '../context/ProductState';
+import Buttons from '../components/SaveButton';
 import { render } from 'react-dom';
 
 /*class App extends React.Component {
@@ -21,8 +22,13 @@ import { render } from 'react-dom';
     function App() {
         return (
             <div className="container">
-                <Header />
+                <div className="row">
+                    <Header />
+                    <Buttons></Buttons>
+                </div>
                 <Newcoverage title="Clonación de coberturas" />
+                
+                
                <ProductState>
                 <div className="row">
                     <Producto></Producto>
