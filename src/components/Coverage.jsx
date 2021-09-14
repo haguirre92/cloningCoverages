@@ -4,11 +4,12 @@ import ProductContext from '../context/ProductContext';
 //import { escapeRegExp } from "../utilities/readXML.js'";
 
 const Coverage = () => {
-    const { getProducts, getCoverage, productSelected, getTerm } = useContext(ProductContext);
+    const { getProducts, getCoverage, productSelected, queryInfoCoverage } = useContext(ProductContext);
 
     useEffect(() => {
         getProducts();
         getCoverage();
+        queryInfoCoverage()
     }, []);
 
     function concatWords(words){
@@ -46,7 +47,7 @@ const Coverage = () => {
     return (
         <div className="col">
             <label >Coverage</label>
-            <select className="form-control form-control-sm" onChange={(e) => getTerm(e.target.value)}>                             
+            <select className="form-control form-control-sm" onChange={(e) => queryInfoCoverage(e.target.value)}>                             
                 {                   
                     productSelected.map(item => {
                         return (
