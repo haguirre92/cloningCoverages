@@ -3,24 +3,36 @@ import UseReducer from "./ProductReducer";
 import ProductContext from "./ProductContext";
 import axios from "axios";
 import XMLParser from 'react-xml-parser';
-
+//PARA HACER LOS LOADERS PUEDO UTILIZAR UNA BANDERA QUE EMPIECE EN FALSE CUANDO SEA INVOCADO CADA
+//FUNCION Y CUANDO ESTA YA TERMINE CAMBIARLE EL VALOR POR TRUE
 const ProductState = (props) => {
     const initialState = {
         products: [],
         productSelected: [],
         terms: [],
         causes: [],
-        costs: []
+        costs: [],
+        loader: false
     }
     const [state, dispatch] = useReducer(UseReducer, initialState)
 
     const getProducts = async () => {
+        activeOrDesactiveLoader(true)
         const res = await axios.get('docs/Products.xml', { "Content-Type": "aplication/xml; charset=utf-8" });
         const jsonDataFromXML = new XMLParser().parseFromString(res.data);
         const data = jsonDataFromXML.getElementsByTagName('typecode');
         dispatch({
             type: 'GET_PRODUCTS',
             payload: data
+        })
+        activeOrDesactiveLoader(false)
+    }
+
+    const activeOrDesactiveLoader = (value) => {
+        console.log('cargando: '+value)
+        dispatch({
+            type: 'GET_LOADER',
+            payload: value
         })
     }
 
@@ -45,24 +57,24 @@ const ProductState = (props) => {
     }
 
     const queryInfoCoverage = (codeCoverage) => {
-       // console.log('tenemos: '+codeCoverage)
-        if(typeof codeCoverage !== 'undefined'){
+        // console.log('tenemos: '+codeCoverage)
+        if (typeof codeCoverage !== 'undefined') {
             extractInfoOfCoverage(codeCoverage)
-        }else{
-            console.log('no tenemos nada para trabajar: '+codeCoverage)
-        }        
+        } else {
+            console.log('no tenemos nada para trabajar: ' + codeCoverage)
+        }
     }
 
     const extractInfoOfCoverage = (codeCoverage) => {
-        const sources = ['Terms','Causes','Costs'];
+        const sources = ['Terms', 'Causes', 'Costs'];
         sources.forEach(source => {
-            getData(source,codeCoverage)
+            getData(source, codeCoverage)
         })
     }
 
-    const getData = async (source,codeCoverage) => {
-        const route = 'docs/'+source+'.xml';
-        const patch = 'GET_'+source.toUpperCase();
+    const getData = async (source, codeCoverage) => {
+        const route = 'docs/' + source + '.xml';
+        const patch = 'GET_' + source.toUpperCase();
         const res = await axios.get(route, { "Content-Type": "aplication/xml; charset=utf-8" })
         const jsonDataFromXML = new XMLParser().parseFromString(res.data);
         const data = jsonDataFromXML.getElementsByTagName('typecode');
@@ -89,6 +101,7 @@ const ProductState = (props) => {
             terms: state.terms,
             causes: state.causes,
             costs: state.costs,
+            loader: state.loader,
             getProducts,
             getCoverage,
             queryInfoCoverage,

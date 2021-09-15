@@ -8,6 +8,7 @@ const Costcategory = () => {
   const { costs } = useContext(ProductContext);
 
   useEffect(() => {
+    //console.log('cargando...')
   }, []);
 
   return (

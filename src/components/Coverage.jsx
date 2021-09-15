@@ -4,12 +4,9 @@ import ProductContext from '../context/ProductContext';
 import escapeRegExp from "../utilities/readXML";
 
 const Coverage = () => {
-    const { getProducts, getCoverage, productSelected, queryInfoCoverage } = useContext(ProductContext);
+    const { productSelected, queryInfoCoverage } = useContext(ProductContext);
 
     useEffect(() => {
-        getProducts();
-        getCoverage();
-        queryInfoCoverage()
     }, []);   
     
     

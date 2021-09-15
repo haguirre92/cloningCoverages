@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, GET_COVERAGES, GET_TERMS, GET_CAUSES, GET_COSTS } from "../actions";
+import { GET_PRODUCTS, GET_COVERAGES, GET_TERMS, GET_CAUSES, GET_COSTS, GET_LOADER} from "../actions";
 
 export default (state, action) => {
     const { payload, type } = action;
@@ -27,6 +27,11 @@ export default (state, action) => {
             return {
                 ...state,
                 costs: payload
+            }
+            case GET_LOADER:
+            return {
+                ...state,
+                loader: payload
             }
         default:
             return state;

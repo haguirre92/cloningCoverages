@@ -3,12 +3,13 @@ import { useContext } from "react";
 import ProductContext from '../context/ProductContext';
 
 const Product = () => {
-    const { products, getProducts, getCoverage } = useContext(ProductContext);
+    const { products, getProducts, getCoverage, loader } = useContext(ProductContext);
 
     useEffect(() => {
         getProducts();
     }, []);
 
+    console.log('estamos en: '+loader)
     return (
         <div className="col">
             <label >Producto</label>
