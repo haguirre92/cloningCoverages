@@ -17,7 +17,7 @@ const ProductState = (props) => {
     const [state, dispatch] = useReducer(UseReducer, initialState)
 
     const getProducts = async () => {
-        activeOrDesactiveLoader(true)
+       // activeOrDesactiveLoader(true)
         const res = await axios.get('docs/Products.xml', { "Content-Type": "aplication/xml; charset=utf-8" });
         const jsonDataFromXML = new XMLParser().parseFromString(res.data);
         const data = jsonDataFromXML.getElementsByTagName('typecode');
@@ -25,11 +25,11 @@ const ProductState = (props) => {
             type: 'GET_PRODUCTS',
             payload: data
         })
-        activeOrDesactiveLoader(false)
+        //activeOrDesactiveLoader(false)
     }
 
     const activeOrDesactiveLoader = (value) => {
-        console.log('cargando: '+value)
+       // console.log('cargando: '+value)
         dispatch({
             type: 'GET_LOADER',
             payload: value
@@ -73,6 +73,7 @@ const ProductState = (props) => {
     }
 
     const getData = async (source, codeCoverage) => {
+        activeOrDesactiveLoader(true)
         const route = 'docs/' + source + '.xml';
         const patch = 'GET_' + source.toUpperCase();
         const res = await axios.get(route, { "Content-Type": "aplication/xml; charset=utf-8" })
@@ -92,6 +93,7 @@ const ProductState = (props) => {
             type: patch,
             payload: infoOfCoverage
         })
+        activeOrDesactiveLoader(false)
     }
 
     return (

@@ -3,14 +3,14 @@ import React, { useEffect } from 'react';
 import { useContext } from "react";
 import ProductContext from '../context/ProductContext';
 import escapeRegExp from "../utilities/readXML";
-
+import Loading from './Loading';
 const Costcategory = () => {
-  const { costs } = useContext(ProductContext);
+  const { costs, loader } = useContext(ProductContext);
 
   useEffect(() => {
     //console.log('cargando...')
   }, []);
-
+  //console.log('cargando... '+loader)
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingThree">
@@ -21,6 +21,9 @@ const Costcategory = () => {
       <div id="collapseThree" className="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           {
+            loader ?
+            <p>Cargando... </p>
+            :
             costs.map(item => {
               return (
                 <div key={item.attributes['code']}>

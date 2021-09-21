@@ -10,6 +10,7 @@ const Losscause = () => {
   useEffect(() => {
   }, []);
 
+  var cont = 0
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingTwo">
@@ -21,11 +22,12 @@ const Losscause = () => {
         <div className="accordion-body">
           {
             causes.map(item => {
+              cont++
               return (
-                <div key={item.attributes['code']}>
+                <div key={item.attributes['code']+'-'+cont}>
                   <input className="form-check-input" type="checkbox" value={item.attributes['code']} defaultChecked />
                   <label className="form-check-label" style={{ marginLeft: "0.5%" }}>
-                    {escapeRegExp(item.attributes['name'])}
+                  {escapeRegExp(item.attributes['name'])}
                   </label>
                 </div>
               )

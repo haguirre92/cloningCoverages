@@ -5,7 +5,7 @@ const path = require("path");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-    entry: {serverEntry: ['./src/index.js']},
+    entry: { serverEntry: ['./src/index.js'] },
     output: {
         path: path.resolve(__dirname, "../dist"),
         filename: "[name].[contenthash].js",
@@ -24,7 +24,7 @@ module.exports = {
                 test: /\.xml$/i,
                 use: "raw-loader",
                 exclude: /node_modules/
-            },           
+            },
             {
                 type: "asset",
                 test: /\.(png|jpg|svg|jpeg|gif)$/i,
@@ -34,9 +34,8 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".json"],
         fallback: {
-            "stream": false,
-            "fs": false
-          }
+            "stream": false
+        }
     },
     plugins: [
         new CleanWebpackPlugin(),

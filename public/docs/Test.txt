@@ -1,0 +1,8 @@
+TypeKey.AccidentType.01=Contacto con productos químicos
+TypeKey.AccidentType.02=Contacto con sustancias u objetos calientes
+TypeKey.AccidentType.03=Contacto con temperaturas extremas
+TypeKey.AccidentType.04=Contacto con fuego o llamas
+TypeKey.AccidentType.05=Contacto con vapor o líquidos calientes
+TypeKey.AccidentType.06=Contacto con polvo, gases o vapores
+TypeKey.AccidentType.07=Contacto con operaciones de soldadura
+TypeKey.AccidentType.09=Contacto con radiación
