@@ -7,7 +7,10 @@ import XMLParser from 'react-xml-parser';
 //FUNCION Y CUANDO ESTA YA TERMINE CAMBIARLE EL VALOR POR TRUE
 const ProductState = (props) => {
     const initialState = {
+        product: 'CPTest',
+        coverage: 'CPTestCov',
         products: [],
+        productsTranslated: [],
         productSelected: [],
         terms: [],
         causes: [],
@@ -28,6 +31,19 @@ const ProductState = (props) => {
         //activeOrDesactiveLoader(false)
     }
 
+    const getProductsTranslated = async() => {
+         const res = await axios.get('docs/typekeys.txt', { "Content-Type": "aplication/txt; charset=utf-8" });
+         //const data = res.data
+         res.then((result) => {
+            const data=result.data
+            dispatch({
+                type: 'GET_PRODUCTSTRANSLATED',
+                payload: data
+            })
+            //console.log(result.data);  
+        })
+         
+     }
     const activeOrDesactiveLoader = (value) => {
        // console.log('cargando: '+value)
         dispatch({
@@ -54,6 +70,11 @@ const ProductState = (props) => {
             type: 'GET_COVERAGES',
             payload: coveragesOfProd
         })
+
+        dispatch({
+            type: 'GET_PRODUCT',
+            payload: code
+        })
     }
 
     const queryInfoCoverage = (codeCoverage) => {
@@ -63,6 +84,11 @@ const ProductState = (props) => {
         } else {
             console.log('no tenemos nada para trabajar: ' + codeCoverage)
         }
+        //agregando la cobertura a los estados
+        dispatch({
+            type: 'GET_COVERAGE',
+            payload: codeCoverage
+        })
     }
 
     const extractInfoOfCoverage = (codeCoverage) => {
@@ -98,13 +124,17 @@ const ProductState = (props) => {
 
     return (
         <ProductContext.Provider value={{
+            product: state.product,
+            coverage: state.coverage,
             products: state.products,
+            productsTranslated: state.productsTranslated,
             productSelected: state.productSelected,
             terms: state.terms,
             causes: state.causes,
             costs: state.costs,
             loader: state.loader,
             getProducts,
+            getProductsTranslated,
             getCoverage,
             queryInfoCoverage,
             extractInfoOfCoverage

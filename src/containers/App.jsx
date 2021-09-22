@@ -17,17 +17,19 @@ import { render } from 'react-dom';
 function App() {
     return (
         <div className="container">
-            <div className="row">
-                <Header />
-                <Buttons></Buttons>
-            </div>
-            <Newcoverage title="Clonación de coberturas" />
             <ProductState>
+                <div className="row">
+                    <div className="col">
+                        <h2>Clonación de coberturas</h2>
+                    </div>
+                    <Buttons></Buttons>
+                </div>
+                <Newcoverage title="Clonación de coberturas" />
                 <div className="row">
                     <Producto></Producto>
                     <Coverage></Coverage>
                 </div><br />
-                    <Infocoverage></Infocoverage>
+                <Infocoverage></Infocoverage>
             </ProductState>
         </div>
     );

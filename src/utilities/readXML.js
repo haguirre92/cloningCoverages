@@ -7,12 +7,14 @@ function concatWords(words){
 }
 
 export default function escapeRegExp(string){
+    //PARA LUEGO ESCRIBIR EN LA LISTAS TOCA REVERTIR ESTO
    const defaultComillasRemovalMap = [
         { 'base': 'ó', 'letters': /&#243;/g },
         { 'base': 'í', 'letters': /&#237;/g },
         { 'base': 'é', 'letters': /&#233;/g },
         { 'base': 'ñ', 'letters': /&#241;/g },
-        { 'base': 'a', 'letters': /&#225;/g }
+        { 'base': 'a', 'letters': /&#225;/g },
+        { 'base': '¿', 'letters': /&#191;/g }
     ]
     const string1 = ' '.toString().concat(string, ' ');
     const separate = string1.toString().split(' ');
